@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Count - Year</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="cal-section">
+        <div class="form">
+            <input id="income" type="number" placeholder="Income">
+            <input id="expense" type="number" placeholder="Expense">
+            <!-- The second value will be selected initially -->
+            <select name="choice" id="years">
+                <option value="">--Select--</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+            <br>
+            <input id="calculate" type="submit" value="Calculate">
+        </div>
+      </div>
+    </div>
+    <div class="main-container">
+        <div class="year-stats">
+          <div class="month-group" id="january-parent">
+            <div class="bar" id="january"></div>
+            <p class="month">Jan</p>
+          </div>
+          <div class="month-group" id="february-parent">
+            <div class="bar" id="february"></div>
+            <p class="month">Feb</p>
+          </div>
+          <div class="month-group" id="march-parent">
+            <div class="bar" id="march"></div>
+            <p class="month">Mar</p>
+          </div>
+          <div class="month-group" id="april-parent">
+            <div class="bar" id="april"></div>
+            <p class="month">Apr</p>
+          </div>
+          <div class="month-group" id="may-parent">
+            <div class="bar" id="may"></div>
+            <p class="month">May</p>
+          </div>
+          <div class="month-group" id="june-parent">
+            <div class="bar" id="june"></div>
+            <p class="month">Jun</p>
+          </div>
+          <div class="month-group" id="july-parent">
+            <div class="bar" id="july"></div>
+            <p class="month">Jul</p>
+          </div>
+          <div class="month-group" id="august-parent">
+            <div class="bar" id="august"></div>
+            <p class="month">Aug</p>
+          </div>
+          <div class="month-group" id="september-parent">
+            <div class="bar" id="september"></div>
+            <p class="month">Sep</p>
+          </div>
+          <div class="month-group" id="october-parent">
+            <div class="bar" id="october"></div>
+            <p class="month">Oct</p>
+          </div>
+          <div class="month-group" id="november-parent">
+            <div class="bar" id="november"></div>
+            <p class="month">Nov</p>
+          </div>
+          <div class="month-group" id="december-parent">
+            <div class="bar" id="december"></div>
+            <p class="month">Dec</p>
+          </div>
+        </div>
+  
+        <div class="stats-info">
+          <div class="graph-container">
+            <div class="percent">
+              <svg viewBox="0 0 36 36" class="circular-chart">
+                <path
+                  class="circle"
+                  stroke-dasharray="100, 100"
+                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path
+                  class="circle"
+                  stroke-dasharray="70, 100"
+                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+              </svg>
+            </div>
+            <div class="profit">
+              <p>Profit</span></p>
+              <p style="margin-top: 15px;">$<span>1000</span></p>
+            </div>
+           
+          </div>
+          <div>
+            <button class="incomeBtn">Income</button>
+            <button class="expenseBtn">Expense</button>
+          </div>
+          <div class="info">
+            <!-- <p>Target : <span>$</span> <span>1,20,000</span></p> -->
+            <p>Income : <span>$</span> <span id="income-store">0</span></p>
+            <p>Expense : <span>$</span> <span id="expense-store">0</span></p>
+          </div>
+        </div>
+    </div>
+    <!-- script link -->
+    <script src="main.js"></script>
+  </body>
+</html>
