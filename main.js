@@ -7,6 +7,8 @@ const incomeStore = document.getElementById("income-store");
 const expenseStore = document.getElementById("expense-store");
 
 const barGet = document.getElementsByClassName("bar");
+const profit = document.getElementById("profit");
+const circle = document.getElementById("circle");
 
 function inputValue(input){
     const inputVal = input.value;
@@ -36,6 +38,8 @@ calculate.addEventListener('click',function(){
         expenseStoreInput += parseInt(expenseInput);
         incomeStore.innerText = incomeStoreInput.toString();
         expenseStore.innerText = expenseStoreInput.toString();
+        profit.innerText = (incomeStoreInput - expenseStoreInput);
+        circle.setAttribute("stroke-dasharray",`${(incomeStoreInput - expenseStoreInput)},100`);
         income.value = "";
         expense.value = "";
         years.value = "";
@@ -49,15 +53,15 @@ calculate.addEventListener('click',function(){
                 january.classList.add("h-25");
                 console.log(januaryIncome)
             }
-            if(januaryIncome > 100){
+            if(januaryIncome > 30){
                 january.classList.add("h-50");
                 console.log(januaryIncome)
             }
-            if(januaryIncome > 200){
+            if(januaryIncome > 60){
                 january.classList.add("h-75");
                 console.log(januaryIncome)
             }
-            if(januaryIncome > 300){
+            if(januaryIncome > 100){
                 januaryParent.classList.add("selected");
                 january.classList.add("h-100");
                 console.log(januaryIncome)
@@ -73,15 +77,15 @@ calculate.addEventListener('click',function(){
                 february.classList.add("h-25");
                 console.log(februaryIncome)
             }
-            if(februaryIncome > 100){
+            if(februaryIncome > 30){
                 february.classList.add("h-50");
                 console.log(februaryIncome)
             }
-            if(februaryIncome > 200){
+            if(februaryIncome > 60){
                 february.classList.add("h-75");
                 console.log(februaryIncome)
             }
-            if(februaryIncome > 300){
+            if(februaryIncome > 100){
                 februaryParent.classList.add("selected");
                 february.classList.add("h-100");
                 console.log(februaryIncome)
@@ -97,15 +101,15 @@ calculate.addEventListener('click',function(){
                 march.classList.add("h-25");
                 console.log(marchIncome)
             }
-            if(marchIncome > 100){
+            if(marchIncome > 30){
                 march.classList.add("h-50");
                 console.log(marchIncome)
             }
-            if(marchIncome > 200){
+            if(marchIncome > 60){
                 march.classList.add("h-75");
                 console.log(marchIncome)
             }
-            if(marchIncome > 300){
+            if(marchIncome > 100){
                 marchParent.classList.add("selected");
                 march.classList.add("h-100");
                 console.log(marchIncome)
@@ -120,13 +124,13 @@ calculate.addEventListener('click',function(){
             if(aprilIncome > 0){
                 april.classList.add("h-25");
                 console.log(aprilIncome)
-            }if(aprilIncome > 100){
+            }if(aprilIncome > 30){
                 april.classList.add("h-50");
                 console.log(aprilIncome)
-            }if(aprilIncome > 200){
+            }if(aprilIncome > 60){
                 april.classList.add("h-75");
                 console.log(aprilIncome)
-            }if(aprilIncome > 300){
+            }if(aprilIncome > 100){
                 aprilParent.classList.add("selected");
                 april.classList.add("h-100");
                 console.log(aprilIncome)
@@ -141,13 +145,13 @@ calculate.addEventListener('click',function(){
             if(mayIncome > 0){
                 may.classList.add("h-25");
                 console.log(mayIncome)
-            }if(mayIncome > 100){
+            }if(mayIncome > 30){
                 may.classList.add("h-50");
                 console.log(mayIncome)
-            }if(mayIncome > 200){
+            }if(mayIncome > 60){
                 may.classList.add("h-75");
                 console.log(mayIncome)
-            }if(mayIncome > 300){
+            }if(mayIncome > 100){
                 mayParent.classList.add("selected");
                 may.classList.add("h-100");
                 console.log(mayIncome)
@@ -162,13 +166,13 @@ calculate.addEventListener('click',function(){
             if(juneIncome > 0){
                 june.classList.add("h-25");
                 console.log(juneIncome)
-            }if(juneIncome > 100){
+            }if(juneIncome > 30){
                 june.classList.add("h-50");
                 console.log(juneIncome)
-            }if(juneIncome > 200){
+            }if(juneIncome > 60){
                 june.classList.add("h-75");
                 console.log(juneIncome)
-            }if(juneIncome > 300){
+            }if(juneIncome > 100){
                 juneParent.classList.add("selected");
                 june.classList.add("h-100");
                 console.log(juneIncome)
@@ -183,13 +187,13 @@ calculate.addEventListener('click',function(){
             if(julyIncome > 0){
                 july.classList.add("h-25");
                 console.log(julyIncome)
-            }if(julyIncome > 100){
+            }if(julyIncome > 30){
                 july.classList.add("h-50");
                 console.log(julyIncome)
-            }if(julyIncome > 200){
+            }if(julyIncome > 60){
                 july.classList.add("h-75");
                 console.log(julyIncome)
-            }if(julyIncome > 300){
+            }if(julyIncome > 100){
                 julyParent.classList.add("selected");
                 july.classList.add("h-100");
                 console.log(julyIncome)
@@ -204,13 +208,13 @@ calculate.addEventListener('click',function(){
             if(augustIncome > 0){
                 august.classList.add("h-25");
                 console.log(augustIncome)
-            }if(augustIncome > 100){
+            }if(augustIncome > 30){
                 august.classList.add("h-50");
                 console.log(augustIncome)
-            }if(augustIncome > 200){
+            }if(augustIncome > 60){
                 august.classList.add("h-75");
                 console.log(augustIncome)
-            }if(augustIncome > 300){
+            }if(augustIncome > 100){
                 augustParent.classList.add("selected");
                 august.classList.add("h-100");
                 console.log(augustIncome)
@@ -225,13 +229,13 @@ calculate.addEventListener('click',function(){
             if(septemberIncome > 0){
                 september.classList.add("h-25");
                 console.log(septemberIncome)
-            }if(septemberIncome > 100){
+            }if(septemberIncome > 30){
                 september.classList.add("h-50");
                 console.log(septemberIncome)
-            }if(septemberIncome > 200){
+            }if(septemberIncome > 60){
                 september.classList.add("h-75");
                 console.log(septemberIncome)
-            }if(septemberIncome > 300){
+            }if(septemberIncome > 100){
                 septemberParent.classList.add("selected");
                 september.classList.add("h-100");
                 console.log(septemberIncome)
@@ -246,13 +250,13 @@ calculate.addEventListener('click',function(){
             if(octoberIncome > 0){
                 october.classList.add("h-25");
                 console.log(octoberIncome)
-            }if(octoberIncome > 100){
+            }if(octoberIncome > 30){
                 october.classList.add("h-50");
                 console.log(octoberIncome)
-            }if(octoberIncome > 200){
+            }if(octoberIncome > 60){
                 october.classList.add("h-75");
                 console.log(octoberIncome)
-            }if(octoberIncome > 300){
+            }if(octoberIncome > 100){
                 octoberParent.classList.add("selected");
                 october.classList.add("h-100");
                 console.log(octoberIncome)
@@ -267,13 +271,13 @@ calculate.addEventListener('click',function(){
             if(novemberIncome > 0){
                 november.classList.add("h-25");
                 console.log(novemberIncome)
-            }if(novemberIncome > 100){
+            }if(novemberIncome > 30){
                 november.classList.add("h-50");
                 console.log(novemberIncome)
-            }if(novemberIncome > 200){
+            }if(novemberIncome > 60){
                 november.classList.add("h-75");
                 console.log(novemberIncome)
-            }if(novemberIncome > 300){
+            }if(novemberIncome > 100){
                 novemberParent.classList.add("selected");
                 november.classList.add("h-100");
                 console.log(novemberIncome)
@@ -288,13 +292,13 @@ calculate.addEventListener('click',function(){
             if(decemberIncome > 0){
                 december.classList.add("h-25");
                 console.log(decemberIncome)
-            }if(decemberIncome > 100){
+            }if(decemberIncome > 30){
                 december.classList.add("h-50");
                 console.log(decemberIncome)
-            }if(decemberIncome > 200){
+            }if(decemberIncome > 60){
                 december.classList.add("h-75");
                 console.log(decemberIncome)
-            }if(decemberIncome > 300){
+            }if(decemberIncome > 100){
                 decemberParent.classList.add("selected");
                 december.classList.add("h-100");
                 console.log(decemberIncome)

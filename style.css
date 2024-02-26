@@ -114,22 +114,14 @@ body {
 }
 
 .circle {
-	stroke: #5397D6;
+	stroke: #abafc6;
 	fill: none;
 	stroke-width: 4;
 }
 
 .circle:nth-child(2) {
-	stroke: #abafc6;
+	stroke: #5397D6;
 }
-
-/* .circle:nth-child(3) {
-	stroke: #5397d6;
-} */
-
-/* .circle:nth-child(4) {
-	stroke: #4cc790;
-} */
 
 .graph-container p {
 	position: absolute;
